@@ -37,7 +37,7 @@ jobs:
       uses: moneyforward/jshint-action@v0.0.1
       with:
         # Specify files or directories
-        /src/*.js
+        /src/
 
       files: # optional
       # Changes `jshint` command line options.
