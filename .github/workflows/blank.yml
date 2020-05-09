@@ -36,9 +36,8 @@ jobs:
     - name: Code review using JSHint
       uses: moneyforward/jshint-action@v0.0.1
       with:
-        # Specify files or directories
-        /src/
-
+      # Specify files or directories
+        
       files: # optional
       # Changes `jshint` command line options.
 
