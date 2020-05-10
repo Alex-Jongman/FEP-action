@@ -1,19 +1,15 @@
 name: CI
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+on: [push]
+  
 jobs:
-  jshint:
+  run-some-shell-commands:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: Hello
+        run: echo "Hello World"
 
-    - name: Get the ENV
-      run: echo GITHUB_BASE_REF = ${GITHUB_BASE_REF}
-
-    - name: Code review using JSHint
-      uses: moneyforward/jshint-action@v0
+      - name: Some Info
+        run: |
+          node -v
+          npm -v
