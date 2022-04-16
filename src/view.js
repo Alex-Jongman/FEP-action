@@ -9,3 +9,8 @@ function addText() {
 }
 
 addText();
+
+export {
+    getText,
+    addText
+}

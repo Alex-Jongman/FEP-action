@@ -3,13 +3,11 @@ name: CI
 on: [push]
   
 jobs:
-  run-some-shell-commands:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
-        run: echo "Hello World"
-
-      - name: Some Info
-        run: |
-          node -v
-          npm -v
+    - uses: actions/checkout@v2
+    - name: Install modules
+      run: yarn
+    - name: Run ESLint
+      run: eslint . --ext .js,.jsx,.ts,.tsx
