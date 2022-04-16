@@ -1,16 +1,16 @@
 function getText() {
-    return 'Action test';
+  return 'Action test';
 }
 
 function addText() {
-    const text_node = document.querySelector('.text');
-    const text = document.createTextNode(getText());
-    text_node.append(text);
+  const TEXT_NODE = document.querySelector('.text');
+  const text = document.createTextNode(getText());
+  TEXT_NODE.append(text);
 }
 
 addText();
 
 export {
-    getText,
-    addText
-}
+  getText,
+  addText,
+};
