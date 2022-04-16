@@ -6,8 +6,9 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: reviewdog/action-eslint@v1
-      with:
-        reporter: github-pr-review # Change reporter.
-        eslint_flags: 'src/'
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install
+      - run: npn run eslint
