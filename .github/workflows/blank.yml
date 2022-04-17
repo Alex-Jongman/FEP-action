@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: '16'
     - run: npm install --save-dev @web/dev-server
-    - run: npm run web-dev-server --node-resolve
+    - run: npm run start
 
   axe:
     needs: wds
@@ -32,4 +32,4 @@ jobs:
       with:
         node-version: '16'
     - run: npm install --save-dev @axe-core/cli
-    - run: npm run axe.cmd localhost:8000
+    - run: npm run a11y
