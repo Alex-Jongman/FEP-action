@@ -1,13 +1,14 @@
 {
   "devDependencies": {
+    "@axe-core/cli": "^4.4.2",
+    "@web/dev-server": "^0.1.30",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0"
   },
-  "dependencies": {
-    "@web/dev-server": "^0.1.30"
-  },
   "scripts": {
-    "eslint": "eslint src/**/*.js"
+    "start": "web-dev-server --node-resolve",
+    "eslint": "eslint src/**/*.js",
+    "a11y": "axe.cmd localhost:8000"
   }
 }

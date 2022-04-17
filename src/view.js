@@ -3,7 +3,7 @@ function getText() {
 }
 
 function addText() {
-  let TEXT_NODE = document.querySelector('.text');
+  const TEXT_NODE = document.querySelector('.text');
   const text = document.createTextNode(getText());
   TEXT_NODE.append(text);
 }

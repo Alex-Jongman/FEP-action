@@ -10,6 +10,26 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: '16'
-    - run: npm install
+    - run: npm install --save-dev eslint
     - name: eslint
       run: npm run eslint
+  wds:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: npm install --save-dev @web/dev-server
+    - run: npm run web-dev-server --node-resolve
+
+  axe:
+    needs: wds
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: npm install --save-dev @axe-core/cli
+    - run: npm run axe.cmd localhost:8000
