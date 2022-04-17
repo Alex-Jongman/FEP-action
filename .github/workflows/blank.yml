@@ -12,4 +12,4 @@ jobs:
         node-version: '16'
     - run: npm install
     - name: eslint
-    - run: npm run eslint
+      run: npm run eslint
