@@ -3,15 +3,15 @@ name: AXE
 on: [push]
   
 jobs:
-  wds:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - run: npm install --save-dev @web/dev-server
-    - run: npm run start
+  # wds:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: actions/setup-node@v3
+  #     with:
+  #       node-version: '16'
+  #   - run: npm install --save-dev @web/dev-server
+  #   - run: npm run start
 
   axe:
     needs: wds
