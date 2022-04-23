@@ -1,18 +1,8 @@
-name: CI
+name: AXE
 
 on: [push]
   
 jobs:
-  eslint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - run: npm install --save-dev eslint
-    - name: eslint
-      run: npm run eslint
   wds:
     runs-on: ubuntu-latest
     steps:
