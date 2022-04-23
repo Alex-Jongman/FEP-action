@@ -3,24 +3,14 @@ name: AXE
 on: [push]
   
 jobs:
-  # wds:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v3
-  #     with:
-  #       node-version: '16'
-  #   - run: npm install --save-dev @web/dev-server
-  #   - run: npm run start
-
   axe:
-    needs: wds
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: '16'
-    - run: npm install --save-dev @axe-core/cli
+    - run: npm install --save-dev @web/dev-server
     - run: npm start & npx wait-on http://localhost:8000
+    - run: npm install --save-dev @axe-core/cli
     - run: npm run a11y
