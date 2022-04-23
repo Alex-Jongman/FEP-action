@@ -9,6 +9,6 @@
   "scripts": {
     "start": "web-dev-server --node-resolve",
     "eslint": "eslint src/**/*.js",
-    "a11y": "axe.cmd localhost:8000"
+    "a11y": "axe localhost:8000"
   }
 }
