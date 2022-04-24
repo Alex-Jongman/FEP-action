@@ -1,0 +1,14 @@
+name: Unit-Test
+
+on: [push]
+  
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: npm install --save-dev @esm-bundle/chai @web/test-runner
+      run: npm run test
