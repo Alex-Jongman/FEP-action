@@ -2,15 +2,15 @@ function getText() {
   return 'Action test';
 }
 
-function addText() {
-  const TEXT_NODE = document.querySelector('.text');
-  const text = document.createTextNode(getText());
-  TEXT_NODE.append(text);
-}
+// function addText() {
+//   const TEXT_NODE = document.querySelector('.text');
+//   const text = document.createTextNode(getText());
+//   TEXT_NODE.append(text);
+// }
 
-addText();
+// addText();
 
 export {
   getText,
-  addText,
+  // addText,
 };
