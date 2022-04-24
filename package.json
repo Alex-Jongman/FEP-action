@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "web-dev-server --node-resolve",
-    "test": "web-test-runner test/**/*.test.js --node-resolve --watch",
+    "test": "web-test-runner test/**/*.test.js --node-resolve",
     "eslint": "eslint src/**/*.js",
     "a11y": "axe localhost:8000"
   }
