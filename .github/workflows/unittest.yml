@@ -11,4 +11,4 @@ jobs:
       with:
         node-version: '16'
     - run: npm install --save-dev @esm-bundle/chai @web/test-runner
-      run: npm run test
+    - run: npm run test
