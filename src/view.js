@@ -10,7 +10,7 @@ function getText() {
 
 // addText();
 
-export {
+export default {
   getText,
   // addText,
 };
