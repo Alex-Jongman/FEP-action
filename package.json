@@ -4,6 +4,7 @@
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@web/dev-server": "^0.1.30",
     "@web/test-runner": "^0.13.27",
+    "cypress": "^9.6.0",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0"
@@ -12,6 +13,7 @@
     "start": "web-dev-server --node-resolve",
     "test": "web-test-runner test/**/*.test.js --node-resolve",
     "eslint": "eslint src/**/*.js",
-    "a11y": "axe localhost:8000"
+    "a11y": "axe localhost:8000",
+    "cypress": "cypress open"
   }
 }
