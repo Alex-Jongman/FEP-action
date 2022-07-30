@@ -14,7 +14,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:vite": "vitest --ui",
+    "test:vite": "vitest --run",
+    "test:viteui": "vitest --ui",
     "test:eslint": "eslint src/**/*.js",
     "test:a11y": "axe localhost:8000",
     "test:cypress": "cypress open"
