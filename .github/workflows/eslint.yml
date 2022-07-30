@@ -10,6 +10,6 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: '16'
-    - run: npm install --save-dev eslint
+    - run: npm ci
     - name: eslint
-      run: npm run eslint
+      run: npm run test:eslint
