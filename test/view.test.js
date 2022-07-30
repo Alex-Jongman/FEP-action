@@ -1,6 +1,4 @@
-/* eslint-disable no-undef */
-import { expect } from '@esm-bundle/chai';
-
+import { describe, it, expect } from 'vitest';
 import { getText } from '../src/view';
 
 describe('testing the function getText', () => {

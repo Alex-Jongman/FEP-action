@@ -1,4 +1,4 @@
-function getText() {
+export default function getText() {
   return 'Action test';
 }
 
@@ -9,8 +9,3 @@ function getText() {
 // }
 
 // addText();
-
-export default {
-  getText,
-  // addText,
-};
