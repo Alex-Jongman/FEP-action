@@ -13,7 +13,7 @@ To solve the LFCR linting errors add a `.gitattributes` file to the root with th
 *.js    eol=lf
 *.json  eol=lf
 ```
-See [eslint linebreak-style rule](https://eslint.org/docs/latest/rules/linebreak-style) and https://git-scm.com/docs/gitattributes for more info.
+See https://dev.to/deadlybyte/please-add-gitattributes-to-your-git-repository-1jld, [eslint linebreak-style rule](https://eslint.org/docs/latest/rules/linebreak-style) and https://git-scm.com/docs/gitattributes for more info.
 
 ## require imports instead of imports
 By adding
@@ -25,4 +25,13 @@ to the `package.json` we indicate that this project uses modules and therefore t
 ## prevent npm publishing 
 small fix... by adding `"private": "true",` to the `package.json` we prevent accidental publishing of the project on npm
 
+## ESLint error of devdependencies
+Witin the vite.config.js file an import triggers ESLint to complain that the import is depended on a devdependency library.
+By adding this rule 
+```
+    "rules": {
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    }
+``` 
+to `.eslintrc.json` the problem is fixed.
 
