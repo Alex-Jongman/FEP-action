@@ -1,4 +1,6 @@
 {
+  "type": "module",
+  "private": "true",
   "devDependencies": {
     "@axe-core/cli": "^4.4.2",
     "@vitest/ui": "^0.19.1",
