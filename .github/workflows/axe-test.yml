@@ -14,8 +14,11 @@ jobs:
     - run: npm ci
     - run: npm install --location=global wait-on
     - run: npm start &
+    - run: npm run test:a11y
+    
     # & npx wait-on http://127.0.0.1:8000/
-    # - name: Run axe
-    - run: |
-        npm install --location=global @axe-core/cli
-        axe http://127.0.0.1:8000 --exit
+    # - name: run axe
+    
+    # - run: |
+    #     npm install --location=global @axe-core/cli
+    #     axe http://127.0.0.1:8000 --exit
