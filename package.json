@@ -2,7 +2,7 @@
   "type": "module",
   "private": "true",
   "devDependencies": {
-    "@axe-core/cli": "^4.4.2",
+    "@axe-core/cli": "^4.4.4-alpha.298",
     "@vitest/ui": "^0.19.1",
     "cypress": "^9.6.0",
     "eslint": "^8.13.0",
