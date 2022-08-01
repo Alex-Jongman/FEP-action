@@ -13,7 +13,8 @@ jobs:
         node-version: '16'
     - run: npm ci
     - run: npm install --location=global wait-on
-    - run: npm start && npx wait-on http://127.0.0.1:8000/
+    - run: npm start &
+    # & npx wait-on http://127.0.0.1:8000/
     # - name: Run axe
     - run: |
         npm install --location=global @axe-core/cli
