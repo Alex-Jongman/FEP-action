@@ -20,6 +20,7 @@
     "test:viteui": "vitest --ui",
     "test:eslint": "eslint src/**/*.js",
     "test:a11y": "axe localhost:8000 --exit",
-    "test:cypress": "cypress open"
+    "test:cypress": "cypress open",
+    "test:cypress-ci": "cypress run"
   }
 }

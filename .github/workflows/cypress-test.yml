@@ -6,15 +6,23 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-    - name: start web server
-      uses: actions/checkout@v3
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
         node-version: '16'
-      run: npm install --save-dev @web/dev-server
-      run: npm start & npx wait-on http://localhost:8000
-    - name: Cypress run
-      uses: cypress-io/github-action@v2
-      with:
-        build: npm run build
-        start: npm start
+    - run: npm ci
+    - run: npm start &
+    - run: npm run test:cypress-ci
+
+    # - name: start web server
+    #   uses: actions/checkout@v3
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: '16'
+    #   run: npm install --save-dev @web/dev-server
+    #   run: npm start & npx wait-on http://localhost:8000
+    # - name: Cypress run
+    #   uses: cypress-io/github-action@v2
+    #   with:
+    #     build: npm run build
+    #     start: npm start
