@@ -17,10 +17,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "test:vite": "vitest --run",
-    "test:viteui": "vitest --ui",
+    "test:vite-ui": "vitest --ui",
     "test:eslint": "eslint src/**/*.js",
-    "test:a11y": "axe localhost:8000 --exit",
-    "test:cypress": "cypress open",
-    "test:cypress-ci": "cypress run"
+    "test:axe": "axe localhost:8000 --exit",
+    "test:cypress": "cypress run",
+    "test:cypress-ui": "cypress run"
   }
 }
